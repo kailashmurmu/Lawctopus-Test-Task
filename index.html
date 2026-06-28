@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mastering Contract Drafting & Freelancing | Lawctopus Law School</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Libre+Franklin:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Franklin:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+
+        .faculty-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .faculty-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 229, 229, 0.5);
+        }
+
+        .curriculum-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #f7a41c;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .curriculum-timeline::before {
+                left: 20px;
+            }
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#43474c",
+                        "surface-tint": "#845400",
+                        "primary-container": "#f7a41c",
+                        "secondary-fixed": "#e0e3e8",
+                        "on-secondary-fixed": "#181c20",
+                        "surface": "#f7f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-background": "#181c20",
+                        "on-primary-fixed": "#2a1800",
+                        "tertiary-container": "#21c3ff",
+                        "inverse-on-surface": "#eef1f6",
+                        "inverse-primary": "#ffb959",
+                        "secondary-container": "#dde0e5",
+                        "status-info": "#2B4C7E",
+                        "outline": "#857461",
+                        "on-error": "#ffffff",
+                        "tertiary": "#006688",
+                        "background": "#f7f9ff",
+                        "on-tertiary-fixed-variant": "#004d67",
+                        "on-primary-fixed-variant": "#643f00",
+                        "on-surface": "#181c20",
+                        "on-tertiary-container": "#004d68",
+                        "surface-container-high": "#e5e8ee",
+                        "surface-white": "#FFFFFF",
+                        "surface-subtle": "#F5F5F5",
+                        "inverse-surface": "#2d3135",
+                        "surface-variant": "#e0e3e8",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#5f6368",
+                        "on-surface-variant": "#524434",
+                        "tertiary-fixed-dim": "#76d1ff",
+                        "primary": "#845400",
+                        "surface-bright": "#f7f9ff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb959",
+                        "on-tertiary-fixed": "#001e2b",
+                        "surface-dim": "#d7dadf",
+                        "secondary-fixed-dim": "#c3c7cc",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#643f00",
+                        "surface-container-low": "#f1f4f9",
+                        "secondary": "#5b5f63",
+                        "primary-fixed": "#ffddb6",
+                        "surface-container-highest": "#e0e3e8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#c2e8ff",
+                        "surface-container": "#ebeef3",
+                        "outline-variant": "#d8c3ad"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "stack-sm": "12px",
+                        "stack-lg": "48px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "display-lg": ["Libre Franklin"],
+                        "body-lg": ["Inter"],
+                        "headline-md-mobile": ["Libre Franklin"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Libre Franklin"],
+                        "headline-md": ["Libre Franklin"],
+                        "display-lg-mobile": ["Libre Franklin"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface">
+    <!-- Top Navigation Bar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface-white border-b border-surface-variant flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto left-0 right-0">
+        <div class="flex items-center">
+            <img src="assets/lawctopus-octopus-logo.png" alt="Lawctopus Law School Logo"
+                class="h-12 w-auto object-contain" />
+        </div>
+        <div class="hidden md:flex gap-gutter">
+            <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+                href="#curriculum">Curriculum</a>
+            <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+                href="#faculty">Faculty</a>
+            <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+                href="#pricing">Pricing</a>
+            <a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors"
+                href="#career">Career Support</a>
+        </div>
+        <button
+            class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-md text-label-md font-bold hover:opacity-90 transition-all active:scale-95">Enroll
+            Now</button>
+    </nav>
+    <main class="mt-16">
+        <!-- Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface-white">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container rounded-l-full blur-3xl"></div>
+            </div>
+            <div
+                class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-stack-lg items-center">
+                <div class="space-y-stack-md">
+                    <div
+                        class="inline-flex items-center gap-2 bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-full font-label-md text-label-md">
+                        <span class="material-symbols-outlined text-[18px]"
+                            style="font-variation-settings: 'FILL' 1;">verified</span>
+                        6-Month Certification Program
+                    </div>
+                    <h1
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background">
+                        Mastering Contract Drafting and <span class="text-primary">Freelancing</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Elevate your legal career with the industry's most comprehensive drafting course. Learn from
+                        experts, master 24+ agreements, and build your freelance practice.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button
+                            class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-title-lg text-title-lg font-bold shadow-lg hover:shadow-xl transition-all">Enroll
+                            for Rs. 24,999/-</button>
+                        <button
+                            onclick="window.open('https://docs.google.com/document/d/1WDeHa90-mEcnmjQui3dI4WGDaHvpiXlazvsYgGmI-n4/edit?tab=t.0', '_blank')"
+                            class="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-title-lg text-title-lg font-bold hover:bg-surface-container transition-all">Download
+                            Syllabus</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div
+                        class="aspect-square bg-surface-container-high rounded-full overflow-hidden border-8 border-surface-white shadow-2xl relative">
+                        <img class="w-full h-full object-cover"
+                            data-alt="A professional legal expert in a high-end, modern law office setting. The individual is focused on a laptop screen displaying a complex contract document. The lighting is bright and warm, reflecting a premium corporate aesthetic with soft orange and deep gray tones. Sharp focus, professional photography style."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuClQMaCRTy_vdJBZlP5u-6xLokxABxlYg4cRBQQvw6hVlkzi1A4XlUK80GzFvB4WbcwoYHdJsH1gbjDfAMaJwrlUCpij-I3LS2cv_UZ5SObTi8oyXs7S8y_ZG9h1Ejsi07NifCIgrHkBngz10Kog_JEg8KvdK-sQPKNMLXNgGOE3bvfHUhfID9bq7NGsAAniPAIO_D_MmvtDJG4Lq0m_kwhd99MSz5DKiBXNYFUEf2LSuMwBPXD2NN4i-ljBpB2BTBLt_yXAzVh4Zs" />
+                    </div>
+                    <!-- Stats Floating Card -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-surface-white p-6 rounded-xl shadow-xl border border-outline-variant max-w-[240px]">
+                        <div class="text-primary font-bold text-headline-md">54+</div>
+                        <div class="text-label-md text-secondary">Live Interactive Sessions with Industry Mentors</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Journey (Overview) -->
+        <section class="py-stack-lg bg-surface-white" id="curriculum">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-20">
+                <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-start">
+                    <!-- Left Column: About & course benefit -->
+                    <div class="space-y-12">
+                        <div>
+                            <h2 class="font-headline-md text-headline-md mb-6 leading-tight">About the 6-Month Long
+                                Expert-Level Course</h2>
+                            <p class="text-body-lg text-secondary leading-relaxed mb-10">
+                                This 6-month intensive program is designed to transform you into a contract drafting
+                                expert. The first two months focus on fundamentals and hands-on review, followed by four
+                                months of specialized training in real estate, IP, and business agreements. It includes
+                                monthly networking and freelancing sessions to help you build a professional profile and
+                                start earning on platforms like Upwork.
+                            </p>
+                        </div>
+                                 <div class="mt-12 space-y-8">
+                            <div class="space-y-4">
+                                <p class="font-title-lg text-title-lg text-on-background">Current Course Starting in</p>
+                                <div class="flex flex-wrap items-center gap-4">
+                                    <div class="bg-primary-fixed p-4 rounded-xl flex items-center gap-4 shadow-sm">
+                                        <span class="material-symbols-outlined text-primary text-[32px]"
+                                            style="font-variation-settings: &quot;FILL&quot; 1;">hourglass_top</span>
+                                        <div class="flex gap-2">
+                                            <div
+                                                class="flex flex-col items-center bg-surface-white px-3 py-2 rounded-lg min-w-[60px]">
+                                                <span id="days" class="text-primary font-bold text-headline-md">00</span>
+                                                <span class="text-label-md text-secondary">Days</span>
+                                            </div>
+                                            <div
+                                                class="flex flex-col items-center bg-surface-white px-3 py-2 rounded-lg min-w-[60px]">
+                                                <span id="hours" class="text-primary font-bold text-headline-md">00</span>
+                                                <span class="text-label-md text-secondary">Hrs</span>
+                                            </div>
+                                            <div
+                                                class="flex flex-col items-center bg-surface-white px-3 py-2 rounded-lg min-w-[60px]">
+                                                <span id="minutes" class="text-primary font-bold text-headline-md">00</span>
+                                                <span class="text-label-md text-secondary">Mins</span>
+                                            </div>
+                                            <div
+                                                class="flex flex-col items-center bg-surface-white px-3 py-2 rounded-lg min-w-[60px]">
+                                                <span id="seconds" class="text-primary font-bold text-headline-md">00</span>
+                                                <span class="text-label-md text-secondary">Secs</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-bold text-title-lg shadow-lg hover:shadow-xl transition-all active:scale-95">Enroll
+                                        Now!</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="flex items-center gap-4 p-6 bg-surface-subtle/30 rounded-2xl border border-surface-variant hover:border-primary transition-all duration-300">
+                                    <div class="bg-primary-container/10 p-3 rounded-xl">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[24px]">calendar_today</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-label-md text-secondary uppercase tracking-wider mb-1">COURSE
+                                            Starts from</p>
+                                        <p class="font-bold text-title-lg text-on-surface">1st July</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 p-6 bg-surface-subtle/30 rounded-2xl border border-surface-variant hover:border-primary transition-all duration-300">
+                                    <div class="bg-primary-container/10 p-3 rounded-xl">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[24px]">event_available</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-label-md text-secondary uppercase tracking-wider mb-1">Register
+                                            by</p>
+                                        <p class="font-bold text-title-lg text-on-surface">June 30</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center gap-4 p-6 bg-surface-subtle/30 rounded-2xl border border-surface-variant hover:border-primary transition-all duration-300">
+                                    <div class="bg-primary-container/10 p-3 rounded-xl">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-[24px]">all_inclusive</span>
+                                    </div>
+                                    <div>
+                                        <p class="text-label-md text-secondary uppercase tracking-wider mb-1">Course
+                                            Access</p>
+                                        <p class="font-bold text-title-lg text-on-surface">Lifetime Access</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Add-On Benefits -->
+                    <div class="space-y-10">
+                          <div
+                            class="space-y-8 p-6 rounded-xl border border-surface-variant bg-surface-subtle/30 hover:border-primary hover:shadow-md transition-all duration-300">
+                            <h3 class="font-title-lg text-title-lg text-on-background">How will this course help you?
+                            </h3>
+                            <ul class="space-y-5">
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Law students will be able to ace Law Firm
+                                        internships and get freelance opportunities.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Lawyers (0-4 years exp) can earn additional
+                                        income through contract drafting.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Learn to network better and generate
+                                        income.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Become familiar with using freelancing
+                                        platforms (Upwork, Fiverr).</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Learn to negotiate well in daily life, job
+                                        interviews, and M&amp;A transactions.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Save 3-4 years of your legal career by
+                                        learning in 6 months.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Master international agreements, governing
+                                        laws, and arbitration rules.</span></li>
+                                <li class="flex items-start gap-4"><span
+                                        class="material-symbols-outlined text-primary shrink-0 mt-0.5">check_circle</span><span
+                                        class="text-body-md text-secondary">Nuances of drafting website Terms &amp;
+                                        Conditions for the digital world.</span></li>
+                            </ul>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md leading-tight">Add-on Benefits</h2>
+                        <div class="grid gap-4">
+                            <div
+                                class="flex items-start gap-6 p-6 bg-surface-white rounded-2xl border border-surface-variant hover:border-primary hover:shadow-md transition-all duration-300">
+                                <div class="text-primary text-headline-md font-bold leading-none opacity-40 shrink-0">01
+                                </div>
+                                <p class="text-body-md font-medium text-on-surface">Certificate of Completion from
+                                    Lawctopus Law School.</p>
+                            </div>
+                            <div
+                                class="flex items-start gap-6 p-6 bg-surface-white rounded-2xl border border-surface-variant hover:border-primary hover:shadow-md transition-all duration-300">
+                                <div class="text-primary text-headline-md font-bold leading-none opacity-40 shrink-0">02
+                                </div>
+                                <p class="text-body-md font-medium text-on-surface">Merit Certificates for
+                                    top-performing learners.</p>
+                            </div>
+                            <div
+                                class="flex items-start gap-6 p-6 bg-surface-white rounded-2xl border border-surface-variant hover:border-primary hover:shadow-md transition-all duration-300">
+                                <div class="text-primary text-headline-md font-bold leading-none opacity-40 shrink-0">03
+                                </div>
+                                <p class="text-body-md font-medium text-on-surface">Free access to exclusive legal
+                                    webinars.</p>
+                            </div>
+                            <div
+                                class="flex items-start gap-6 p-6 bg-surface-white rounded-2xl border border-surface-variant hover:border-primary hover:shadow-md transition-all duration-300">
+                                <div class="text-primary text-headline-md font-bold leading-none opacity-40 shrink-0">04
+                                </div>
+                                <p class="text-body-md font-medium text-on-surface">Exclusive alumni community with
+                                    internship, job updates &amp; course discounts.</p>
+                            </div>
+                        </div>
+             
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Course Journey (Overview) -->
+        <section class="py-stack-lg bg-surface" id="curriculum">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-stack-lg">
+                    <h2 class="font-headline-md text-headline-md mb-4">Your 6-Month Professional Journey</h2>
+                    <p class="text-body-lg text-secondary max-w-2xl mx-auto">A structured path from legal fundamentals
+                        to specialized high-value contract mastery.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-gutter">
+                    <!-- Phase 1 -->
+                    <div
+                        class="bg-surface-white p-8 rounded-xl border border-surface-variant relative overflow-hidden group hover:border-primary transition-colors">
+                        <div
+                            class="absolute top-0 right-0 bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-bl-xl">
+                            Phase 1</div>
+                        <div class="text-primary font-bold text-label-md mb-2">MONTH 1-2</div>
+                        <h3 class="font-title-lg text-title-lg mb-4">Drafting Fundamentals</h3>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Core concepts of Indian Contract Act & Drafting basics</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Standard Boilerplate clauses and their variations</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Structuring agreements for clarity and enforceability</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div
+                        class="bg-surface-white p-8 rounded-xl border border-surface-variant relative overflow-hidden group hover:border-primary transition-colors">
+                        <div
+                            class="absolute top-0 right-0 bg-primary-container/10 text-primary font-bold px-4 py-2 rounded-bl-xl">
+                            Phase 2</div>
+                        <div class="text-primary font-bold text-label-md mb-2">MONTH 3-6</div>
+                        <h3 class="font-title-lg text-title-lg mb-4">Specialized Contracts & Freelancing</h3>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Commercial, IP, Tech, and Employment Agreements</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Advanced Negotiation and Client Management</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="material-symbols-outlined text-primary">check_circle</span>
+                                <span class="text-body-md">Building your Freelance practice from scratch</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="relative curriculum-timeline">
+                    <!-- Timeline items -->
+                    <div class="space-y-16">
+                        <!-- Month 1: Right -->
+                        <div class="flex md:justify-end items-center w-full">
+                            <div class="md:w-1/2 md:pl-12 pl-12 relative">
+                                <div
+                                    class="absolute left-[-11px] md:left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 1</div>
+                                    <h3 class="font-title-lg text-xl mb-3">Essential Clauses</h3>
+                                    <p class="text-secondary text-body-md">Mastering the skeleton: Recitals,
+                                        Definitions, Indemnity, and Boilerplate clauses.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Month 2: Left -->
+                        <div class="flex md:justify-start items-center w-full">
+                            <div class="md:w-1/2 md:pr-12 pl-12 md:pl-0 relative">
+                                <div
+                                    class="md:absolute md:right-[-11px] absolute left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 2</div>
+                                    <h3 class="font-title-lg text-xl mb-3">Execution &amp; Negotiation</h3>
+                                    <p class="text-secondary text-body-md">Stamp duty, registration, and live
+                                        negotiation table exercises.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Month 3: Right -->
+                        <div class="flex md:justify-end items-center w-full">
+                            <div class="md:w-1/2 md:pl-12 pl-12 relative">
+                                <div
+                                    class="absolute left-[-11px] md:left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 3</div>
+                                    <h3 class="font-title-lg text-xl mb-3">International Agreements</h3>
+                                    <p class="text-secondary text-body-md">Cross-border contracts, governing law, and
+                                        global dispute resolution.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Month 4: Left -->
+                        <div class="flex md:justify-start items-center w-full">
+                            <div class="md:w-1/2 md:pr-12 pl-12 md:pl-0 relative">
+                                <div
+                                    class="md:absolute md:right-[-11px] absolute left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 4</div>
+                                    <h3 class="font-title-lg text-xl mb-3">IP &amp; Tech Contracts</h3>
+                                    <p class="text-secondary text-body-md">Software licensing, SaaS, Trademark
+                                        assignments, and Privacy policies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Month 5: Right -->
+                        <div class="flex md:justify-end items-center w-full">
+                            <div class="md:w-1/2 md:pl-12 pl-12 relative">
+                                <div
+                                    class="absolute left-[-11px] md:left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 5</div>
+                                    <h3 class="font-title-lg text-xl mb-3">Real Estate Agreements</h3>
+                                    <p class="text-secondary text-body-md">Sale deeds, Lease licenses, Power of
+                                        Attorney, and Franchise agreements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Month 6: Left -->
+                        <div class="flex md:justify-start items-center w-full">
+                            <div class="md:w-1/2 md:pr-12 pl-12 md:pl-0 relative">
+                                <div
+                                    class="md:absolute md:right-[-11px] absolute left-[-11px] top-1/2 -translate-y-1/2 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm z-10">
+                                </div>
+                                <div
+                                    class="p-8 border border-outline-variant bg-surface-subtle rounded-3xl hover:shadow-lg transition-shadow">
+                                    <div class="text-primary font-bold mb-2">MONTH 6</div>
+                                    <h3 class="font-title-lg text-xl mb-3">Business &amp; Commercial</h3>
+                                    <p class="text-secondary text-body-md">Shareholders' Agreements (SHA), SPA, and
+                                        Partnership deeds.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Join - Bento Grid -->
+        <section class="py-stack-lg bg-surface-white">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <h2 class="font-headline-md text-headline-md text-center mb-stack-lg">Why This is India's Best Drafting
+                    Program</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="md:col-span-2 bg-surface-subtle p-8 rounded-xl flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="bg-primary-container w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-on-primary">draw</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md mb-4">24+ Agreements Mastered</h3>
+                            <p class="text-body-lg text-secondary">From basic NDAs to complex Shareholders' Agreements,
+                                you will draft, review, and receive feedback on two dozen industry-standard legal
+                                documents.</p>
+                        </div>
+                        <div class="mt-8 flex flex-wrap gap-2">
+                            <span
+                                class="bg-surface-white px-3 py-1 rounded border border-outline-variant text-label-md">SaaS
+                                Agreements</span>
+                            <span
+                                class="bg-surface-white px-3 py-1 rounded border border-outline-variant text-label-md">Founder
+                                Agreements</span>
+                            <span
+                                class="bg-surface-white px-3 py-1 rounded border border-outline-variant text-label-md">License
+                                Agreements</span>
+                        </div>
+                    </div>
+                    <div class="bg-inverse-surface p-8 rounded-xl text-surface-white">
+                        <div
+                            class="bg-primary-container w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-on-primary">
+                            <span class="material-symbols-outlined">groups</span>
+                        </div>
+                        <h3 class="font-title-lg text-title-lg mb-4">54 Live Sessions</h3>
+                        <p class="text-body-md opacity-80 mb-6">Interactive weekend sessions with practicing lawyers.
+                            Get your doubts cleared in real-time and learn the "law in practice."</p>
+                        <div class="h-1 w-full bg-surface-variant/20 rounded">
+                            <div class="h-1 bg-primary-container w-3/4 rounded"></div>
+                        </div>
+                    </div>
+                    <div class="bg-surface-subtle p-8 rounded-xl">
+                        <div class="bg-primary-container w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-on-primary">work</span>
+                        </div>
+                        <h3 class="font-title-lg text-title-lg mb-4">Freelancing Focus</h3>
+                        <p class="text-body-md text-secondary">A dedicated module on how to find clients, price your
+                            services, and manage a legal freelancing career.</p>
+                    </div>
+                    <div
+                        class="md:col-span-2 bg-primary-container p-8 rounded-xl flex items-center gap-stack-md text-on-primary-container">
+                        <div class="hidden sm:block shrink-0">
+                            <span class="material-symbols-outlined text-[64px]"
+                                style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md mb-2">AI-Ready Drafting</h3>
+                            <p class="text-body-md font-medium">Free access to Lawctopus Prism AI and dedicated sessions
+                                on using AI to augment your drafting speed and quality without compromising ethics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Faculty Showcase -->
+        <section class="py-stack-lg bg-surface" id="faculty">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex justify-between items-end mb-stack-lg">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline-md text-headline-md mb-2">Learn from Global Experts</h2>
+                        <p class="text-body-lg text-secondary">Our faculty includes Partners at top law firms,
+                            independent practitioners, and in-house counsels.</p>
+                    </div>
+                    <div class="hidden md:flex gap-4">
+                        <button class="p-2 rounded-full border border-outline hover:bg-surface-variant transition-all"
+                            onclick="scrollFaculty('left')">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="p-2 rounded-full border border-outline hover:bg-surface-variant transition-all"
+                            onclick="scrollFaculty('right')">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="faculty-scroll flex gap-6 overflow-x-auto pb-8 snap-x" id="facultyList">
+                    <!-- Faculty Card 1 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Jai" class="w-full aspect-[0.93] object-cover rounded-lg mb-4"
+                            src="assets/Jaibatruka.png" />
+                        <h4 class="font-title-lg text-title-lg">Jai</h4>
+                        <p class="text-label-md text-primary mb-2">Lead Instructor</p>
+                    </div>
+                    <!-- Faculty Card 2 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Anup Menon" class="w-full aspect-[0.93] object-cover rounded-lg mb-4"
+                            src="assets/Anup.png" />
+                        <h4 class="font-title-lg text-title-lg">Anup Menon V.</h4>
+                        <p class="text-label-md text-primary mb-2">Legal Consultant</p>
+                    </div>
+                    <!-- Faculty Card 3 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Tanuj" class="w-full aspect-[0.93] object-cover rounded-lg mb-4"
+                            src="assets/Tanuj.png" />
+                        <h4 class="font-title-lg text-title-lg">Tanuj Kalia</h4>
+                        <p class="text-label-md text-primary mb-2">CEO, Lawctopus</p>
+                    </div>
+                    <!-- Faculty Card 4 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Keshava" class="w-full aspect-square object-cover rounded-lg mb-4"
+                            src="assets/Keshava.png" />
+                        <h4 class="font-title-lg text-title-lg">H. B. Keshava</h4>
+                        <p class="text-label-md text-primary mb-2">Corporate Lawyer</p>
+                    </div>
+                    <!-- Faculty Card 5 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Gourav" class="w-full aspect-[0.93] object-cover rounded-lg mb-4"
+                            src="assets/Gourav.png" />
+                        <h4 class="font-title-lg text-title-lg">Gourav</h4>
+                        <p class="text-label-md text-primaryS mb-2">Contracts Specialist</p>
+                    </div>
+                    <!-- Faculty Card 6 -->
+                    <div class="snap-start min-w-[280px] bg-surface-white rounded-xl border border-surface-variant p-4">
+                        <img alt="Bhumesh" class="w-full aspect-[0.93] object-cover rounded-lg mb-4"
+                            src="assets/Bhumesh.png" />
+                        <h4 class="font-title-lg text-title-lg">Bhumesh Varma</h4>
+                        <p class="text-label-md text-primary mb-2">Partner, Corporate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Career Support -->
+        <section class="py-stack-lg bg-inverse-surface text-surface-white overflow-hidden relative" id="career">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+                <div class="grid md:grid-cols-2 gap-stack-lg items-center">
+                    <div>
+                        <h2 class="font-headline-md text-headline-md mb-6">Career Catalyst Support</h2>
+                        <p class="text-body-lg opacity-80 mb-8">We don't just teach you to draft; we ensure you are
+                            ready for the professional world.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container text-on-primary-container p-2 rounded-lg">
+                                    <span class="material-symbols-outlined">description</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-title-lg text-title-lg">CV & LinkedIn Overhaul</h4>
+                                    <p class="text-body-md opacity-70">1-on-1 sessions to optimize your professional
+                                        profile for recruiters and clients.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container text-on-primary-container p-2 rounded-lg">
+                                    <span class="material-symbols-outlined">stars</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-title-lg text-title-lg">Exclusive Internships</h4>
+                                    <p class="text-body-md opacity-70">Top performers get curated placement and
+                                        internship opportunities via the Lawctopus network.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary-container text-on-primary-container p-2 rounded-lg">
+                                    <span class="material-symbols-outlined">psychology</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-title-lg text-title-lg">Mock Interviews</h4>
+                                    <p class="text-body-md opacity-70">Roleplay sessions focusing on drafting-related
+                                        technical questions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="bg-surface-white/10 backdrop-blur-md p-8 rounded-2xl border border-surface-white/20">
+                            <img class="w-full rounded-lg shadow-2xl mb-6"
+                                data-alt="A clean, professional minimalist workspace with a sleek laptop, a legal notebook, and high-quality stationery. A cup of coffee rests to the side. The lighting is focused and inspiring, representing career advancement and professional success. Corporate and sophisticated color palette of whites, oranges, and deep grays."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHw-NXx5YYToEDh5IqaTgSeVRD10lFWzvTReVwcqHT5v9Z2sRSKagJYCezn58dU9nx9SFdibrfpF2TdD-rdLhbM_4sjj6MdWpoeodIqM9mLBix4F3J72WZ3uDnYnZ2GlO_efCOkSyNoynAYx2WpBsp3UG5_oxH00s7I_ubBsxhbzNAUyVxaajSUK0vbgPccsmj71JgnzA9wLqqFuRci1d8ZmppLJM05AD0QxYkIjOr444m89oBMmgbMrBu1XKHB9q1Qpv-Drn4x3Y" />
+                            <div class="flex items-center gap-4">
+                                <div class="flex -space-x-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full border-2 border-inverse-surface bg-surface-variant overflow-hidden">
+                                        <img alt="User" class="object-cover"
+                                            src="https://i.pravatar.cc/100?img=12" />
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded-full border-2 border-inverse-surface bg-surface-variant overflow-hidden">
+                                        <img alt="User" class="object-cover"
+                                            src="https://i.pravatar.cc/100?img=25" />
+                                    </div>
+                                    <div
+                                        class="w-10 h-10 rounded-full border-2 border-inverse-surface bg-surface-variant overflow-hidden">
+                                        <img alt="User" class="object-cover"
+                                            src="https://i.pravatar.cc/100?img=40" />
+                                    </div>
+                                </div>
+                                <p class="text-label-md font-bold text-primary-container">Join 500+ successful alumni
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="py-stack-lg bg-surface" id="pricing">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+                <h2 class="font-headline-md text-headline-md mb-stack-md">Invest in Your Career</h2>
+                <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
+                    <!-- 2-Month Course Card -->
+                    <div
+                        class="flex-1 bg-surface-white border rounded-2xl p-stack-lg shadow-lg flex flex-col border-primary-container border-2">
+                        <h3 class="font-headline-md text-headline-md mb-2">Certificate Program</h3>
+                        <p class="text-secondary mb-8">2-month online certification</p>
+                        <div class="mb-8">
+                            <div class="text-display-lg text-on-background font-bold">Rs. 7,999/-</div>
+                            <p class="text-label-md text-status-info mt-2">Foundational level</p>
+                        </div>
+                        <ul class="text-left space-y-4 mb-stack-lg flex-grow">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">Begin to master contract drafting</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">8 Live interactive sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">2 Compulsory assignments with feedback</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">202 pages of practical reading modules</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full border-2 border-primary-container py-4 rounded-xl font-headline-md text-headline-md font-bold hover:bg-primary-container hover:text-on-primary-container active:scale-95 transition-all bg-primary-container text-on-primary-container hover:scale-[1.02] shadow-lg">Enroll
+                            Now</button>
+                    </div>
+                    <!-- Existing Mastery Program Card -->
+                    <div
+                        class="flex-1 bg-surface-white border-2 border-primary-container rounded-2xl p-stack-lg shadow-xl relative overflow-hidden flex flex-col">
+                        <div
+                            class="absolute top-0 right-0 bg-primary-container text-on-primary-container font-bold px-8 py-2 transform rotate-45 translate-x-8 translate-y-4">
+                            BEST VALUE</div>
+                        <h3 class="font-headline-md text-headline-md mb-2">Mastery Program</h3>
+                        <p class="text-secondary mb-8">All inclusive 6-month certification</p>
+                        <div class="mb-8">
+                            <span class="text-body-lg text-secondary line-through">Rs. 60,000/-</span>
+                            <div class="text-display-lg text-on-background font-bold">Rs. 24,999/-</div>
+                            <p class="text-label-md text-status-info mt-2">Professional level</p>
+                        </div>
+                        <ul class="text-left space-y-4 mb-stack-lg flex-grow">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">Life-time access to course material</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">54 Live interactive sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">check</span>
+                                <span class="text-body-md">Personalized feedback on all assignments</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-headline-md text-headline-md font-bold hover:scale-[1.02] active:scale-95 transition-all shadow-lg mb-6">Enroll
+                            Now</button>
+                        <div class="flex items-center justify-center gap-2 text-primary font-bold">
+                            <span class="material-symbols-outlined">verified_user</span>
+                            <span class="">100% Money-Back Guarantee</span>
+                        </div>
+                        <p class="text-label-md text-secondary mt-2">Subject to course completion and eligibility
+                            criteria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="bg-primary-container py-12">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-on-primary-container">Still have questions?</h2>
+                    <p class="text-body-lg text-on-primary-container opacity-80">Book a free counseling session with our
+                        faculty.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="bg-inverse-surface text-surface-white px-8 py-3 rounded-lg font-bold hover:opacity-90">Talk
+                        to Faculty</button>
+                    <button
+                        class="bg-surface-white text-on-surface px-8 py-3 rounded-lg font-bold border border-outline-variant">WhatsApp
+                        Us</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-secondary text-on-primary py-stack-lg w-full">
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-stack-md">
+            <div class="max-w-xs">
+                <div class="font-title-lg text-title-lg font-bold text-on-primary mb-4">Lawctopus Law School</div>
+                <p class="font-body-md text-body-md opacity-70">Leading professional legal education platform for law
+                    students and young lawyers in India.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-stack-lg">
+                <div class="flex flex-col gap-2">
+                    <div class="font-label-md text-label-md font-bold mb-2">Quick Links</div>
+                    <a class="text-surface-variant hover:text-primary-container underline transition-all font-body-md text-body-md"
+                        href="#">Terms of Service</a>
+                    <a class="text-surface-variant hover:text-primary-container underline transition-all font-body-md text-body-md"
+                        href="#">Privacy Policy</a>
+                    <a class="text-surface-variant hover:text-primary-container underline transition-all font-body-md text-body-md"
+                        href="#">Refund Policy</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="font-label-md text-label-md font-bold mb-2">Support</div>
+                    <a class="text-surface-variant hover:text-primary-container underline transition-all font-body-md text-body-md"
+                        href="#">Contact Faculty</a>
+                    <a class="text-surface-variant hover:text-primary-container underline transition-all font-body-md text-body-md"
+                        href="#">Help Center</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop mt-stack-lg pt-stack-md border-t border-surface-variant/20">
+            <p class="font-body-md text-body-md opacity-60">© 2024 Lawctopus Law School. All rights reserved.
+                Professional Legal Education.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
